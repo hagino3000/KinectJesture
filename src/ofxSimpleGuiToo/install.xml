@@ -1,0 +1,65 @@
+<install>
+
+	<version>1.1</version>
+	<author>Mehmet Akten</author>
+	<url>code.google.com/p/ofxmsaof/</url>
+
+	<requires>
+		<addon>ofxXmlSettings</addon>
+		<addon>ofxMSAInteractiveObject</addon>
+	</requires>
+
+	<add>	
+		<src>
+			<folder name="addons/ofxSimpleGuiToo/src">			
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiConfig.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiConfig.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiControl.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiControl.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiIncludes.h</file>
+			</folder>
+
+			<folder name="addons/ofxSimpleGuiToo/src/Controls">			
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiButton.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiButton.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiColorPicker.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiColorPicker.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiContent.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiContent.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiFPSCounter.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiFPSCounter.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiMovieSlider.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiMovieSlider.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiOption.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiOption.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiOptionGroup.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiOptionGroup.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiQuadWarp.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiQuadWarp.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSlider2d.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSlider2d.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderBase.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderFloat.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderInt.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiTitle.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiTitle.cpp</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiToggle.h</file>
+				<file>../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiToggle.cpp</file>
+			</folder>            
+		</src>
+
+		<include>
+			<path>../../../addons/ofxSimpleGuiToo/src</path>
+			<path>../../../addons/ofxSimpleGuiToo/src/Controls</path>
+		</include>
+		
+		<link>
+		</link>
+
+	</add>
+	
+</install>

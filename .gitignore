@@ -1,0 +1,17 @@
+*.depend
+*.layout
+*.mode*v3
+*.pbxuser
+*.app*
+*.DS_*
+*.swp
+
+
+.hgignore
+.hg/
+.svn/
+obj/
+bin/
+build/
+!data/
+
