@@ -10,13 +10,13 @@
 #include "hand.h"
 
 int mouseDownCount = 0;
-int MOUSE_CLICK_FRAME = 8;
-int HAND_MODE_NORMAL = 0;
-int HAND_MODE_MOVE = 1;
-int HAND_MODE_CLICK = 2;
-int HAND_MODE_DRAG = 3;
-int POSITION_HISTORY_SIZE = 4;
-int JESTURE_FIRE_BUFFER = 20;
+const int MOUSE_CLICK_FRAME = 8;
+const int HAND_MODE_NORMAL = 0;
+const int HAND_MODE_MOVE = 1;
+const int HAND_MODE_CLICK = 2;
+const int HAND_MODE_DRAG = 3;
+const int POSITION_HISTORY_SIZE = 4;
+const int JESTURE_FIRE_BUFFER = 20;
 
 
 //コンストラクタ
@@ -89,10 +89,10 @@ CGPoint Hand::calcMousePosition() {
 	float x = currentPos.x;
 	float y = currentPos.y;
 		
-	x = max(0.0, x*100.0/640.0-10.0f);
-	x = min(x, 80.0f)/80*100;
+	x = max(0.0, x*100.0/640.0-15.0f);
+	x = min(x, 70.0f)/70*100;
 	y = max(0.0, y*100.0/480.0-10.0f);
-	y = min(y, 80.0f)/80*100;
+	y = min(y, 70.0f)/70*100;
 	
 	CGPoint pt;
 	pt.x = x/100*displayWidth;
@@ -182,16 +182,9 @@ bool Hand::checkClick(int cornerCount) {
 	}
 	oldCornerNums = oldCornerNums/4;
 	cornerNums = cornerNums/2;
+			
 	
-	//cout << ofToString(abs(oldCornerNums - cornerNums)) << endl;
-	
-	bool isClicking = false;
-	if (abs(oldCornerNums - cornerNums) > 100) {
-		isClicking = true;
-	}
-	
-	
-	if (handMode == HAND_MODE_NORMAL && cornerNums + 160 < oldCornerNums) {
+	if (handMode == HAND_MODE_NORMAL && cornerNums + 150 < oldCornerNums) {
 		// mouse down
 		currentCornerNums = cornerNums;
 		//fireMouseDown();
@@ -201,7 +194,7 @@ bool Hand::checkClick(int cornerCount) {
 		mouseDownCount = 0;
 		return true;
 	}
-	if (cornerNums > currentCornerNums + 160) {
+	if (cornerNums > currentCornerNums + 150) {
 		if (handMode == HAND_MODE_DRAG) {
 			fireMouseUp();
 			soundClick.play();

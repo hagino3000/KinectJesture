@@ -56,6 +56,7 @@ public:
 	
 	bool				debug;
 	bool				showConfigUI;
+	bool				mirror;
 	
 	// for image
 	int 				nearThreshold;
@@ -79,7 +80,7 @@ public:
 	
 	
 	// fonts
-	ofTrueTypeFont		fontOratorStd;
+	ofTrueTypeFont		msgFont;
 };
 
 #endif

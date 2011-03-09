@@ -5,8 +5,6 @@
 zmq::context_t context (1);
 zmq::socket_t socket (context, ZMQ_PUB);
 
-bool endConfigBtn = false;
-
 //--------------------------------------------------------------
 void HandJesture::setup() {
 	ofSetLogLevel(0);
@@ -14,6 +12,7 @@ void HandJesture::setup() {
 	
 	debug = true;
 	showConfigUI = true;
+	mirror = true;
 	
 	// Setup Kinect
 	angle = -5;
@@ -44,8 +43,8 @@ void HandJesture::setup() {
 	displayHeight = 800;
 	
 	// Fonts
-	fontOratorStd.loadFont("Courier New.ttf",14, true, true);
-	fontOratorStd.setLineHeight(20.0f);
+	msgFont.loadFont("Courier New.ttf",14, true, true);
+	msgFont.setLineHeight(20.0f);
 	
 	/*
 	try {
@@ -71,32 +70,22 @@ void HandJesture::setup() {
 	gui.config->gridSize.x = 300;
 	gui.addTitle("KINECT SETTINGS");
 	gui.addSlider("Tilt Angle", angle, -30, 30);
+	gui.addToggle("Mirror Mode", mirror);
 	gui.addTitle("DETECT RANGE");
 	gui.addSlider("Near Distance", nearThreshold, 5, 20);
 	gui.addSlider("Far Distance", farThreshold, 20, 60);
 	gui.addTitle("MOUSE CONTROLL");
 	gui.addSlider("Display Width", displayWidth, 600, 1980);
 	gui.addSlider("Display height", displayHeight, 600, 1980);
-	gui.addButton("End Configure!!", endConfigBtn);
-	gui.setDefaultKeys(false);
+	gui.setDefaultKeys(true);
 	gui.loadFromXML();
 	gui.show();
 
-	
-	std::cout << "width:" + ofToString(kinect.width) << endl;
-	std::cout << "height:" + ofToString(kinect.height) << endl;
-	
 }
 
 //--------------------------------------------------------------
 void HandJesture::update() {
-	
-	if (endConfigBtn) {
-		showConfigUI = false;
-		ofSetWindowShape(400, 300);
-		kinect.setCameraTiltAngle(angle);
-	}
-	
+		
 	kinect.update();
 	checkDepthUpdated();
 	
@@ -116,9 +105,7 @@ void HandJesture::update() {
 			nearestDepth = pix[i];
 		}
 	}
-	
-	///cout << ofToString(nearestDepth) << endl;
-	
+		
 	for(int i = 0; i < numPixels; i++){
 		//if( pix[i] < nearThreshold && pix[i] > farThreshold ){
 		if(minThreshold < pix[i] 
@@ -135,10 +122,12 @@ void HandJesture::update() {
 	//update the cv image
 	grayImage.flagImageChanged();
 	//grayThresh.flagImageChanged();
-	//grayImage.mirror(false, true);
+	if (mirror) {
+		grayImage.mirror(false, true);
+	}
 	//grayThresh.mirror(false, true);
 	
-    contourFinder.findContours(grayImage, 800, (kinect.width*kinect.height)/4, 2, false);
+    contourFinder.findContours(grayImage, 1500, (kinect.width*kinect.height)/4, 2, false);
 	
 	if (showConfigUI) {
 		return;
@@ -178,13 +167,13 @@ void HandJesture::update() {
 	ofLog(OF_LOG_VERBOSE, ofToString(detectTwoHandsCount));
 	if (detectingTwoHands) {
 		ofLog(OF_LOG_VERBOSE, "detecTwo");
-		if (detectTwoHandsCount < 20) {
+		if (detectTwoHandsCount < 15) {
 			detectingTwoHands = false;
 			sendEvent("Register", "\"mode\":\"double\"");
 		}
 	} else {
 		ofLog(OF_LOG_VERBOSE, "Not...");
-		if (detectTwoHandsCount > 40) {
+		if (detectTwoHandsCount > 30) {
 			detectingTwoHands = true;
 			sendEvent("Register", "\"mode\":\"double\"");
 			CGEventRef keyEv = CGEventCreateKeyboardEvent(NULL, (CGKeyCode)101, true);
@@ -261,11 +250,11 @@ void HandJesture::sendEvent(const std::string& etype, const std::string& edata) 
  */
 void HandJesture::checkDepthUpdated(){
     if (ofGetFrameNum() % 150 == 0) {
-        std::cout << "checkDepthUpdated" << endl;
+		ofLog(OF_LOG_VERBOSE, "check depth updated");
         unsigned char * nextDepth = kinect.getDepthPixels();
 		
         if (ofGetFrameNum() != 150) {
-            std::cout << "Start compare depth" << endl;
+			ofLog(OF_LOG_VERBOSE, "Start compare depth pixels");
 			unsigned char * currentDepthPixels = checkGrayImage.getPixels();
 			
 		    int pixNum = kinect.width * kinect.height;
@@ -274,7 +263,7 @@ void HandJesture::checkDepthUpdated(){
                     break;
 				}
 				if (i > pixNum / 2) {
-					std::cout << "Depth pixels did not updated!!" << endl;
+					ofLog(OF_LOG_ERROR, "Depth pixels could not be refreshed. Reset Kinect");
 					kinect.close();
 					kinect.open();
 					kinect.setCameraTiltAngle(angle);
@@ -297,7 +286,7 @@ void HandJesture::draw() {
 		kinect.drawDepth(400, 0, 400, 300);
 		gui.draw();
 		
-		fontOratorStd.drawString("Press [End Configure] button to start.", 20, ofGetHeight()-60);
+		msgFont.drawString("Press Space Key to start.", 20, ofGetHeight()-60);
 		
 		ofPushMatrix();
 		ofTranslate(400, 300, 0);
@@ -330,7 +319,7 @@ void HandJesture::draw() {
 	
 		
 	ofSetColor(255, 255, 255);
-	fontOratorStd.drawString("fps: "+ ofToString(ofGetFrameRate()), 20, ofGetHeight()-40);
+	msgFont.drawString("fps: "+ ofToString(ofGetFrameRate()), 20, ofGetHeight()-40);
 		
 	ofNoFill();
 }
@@ -338,7 +327,7 @@ void HandJesture::draw() {
 //--------------------------------------------------------------
 void HandJesture::exit(){
 	kinect.close();
-	std::cout << "Close Kinect and exit" << endl;
+	ofLog(OF_LOG_NOTICE, "Close Kinect and exit");
 }
 
 
@@ -379,8 +368,13 @@ void HandJesture::keyPressed (int key)
 			kinect.setCameraTiltAngle(angle);
             break;
 		case ' ':
-			ofSetWindowShape(800, 600);
-			showConfigUI = true;
+			showConfigUI = !showConfigUI;
+			if (showConfigUI) {
+				ofSetWindowShape(800, 600);
+			} else {
+				ofSetWindowShape(400, 300);
+				kinect.setCameraTiltAngle(angle);
+			}
 			break;			
 		case OF_KEY_UP:
 			angle++;
