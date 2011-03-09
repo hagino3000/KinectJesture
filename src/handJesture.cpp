@@ -60,6 +60,12 @@ void HandJesture::setup() {
 	}
 	*/
 	
+	// Sounds
+	soundDetect.loadSound("sound/16582__tedthetrumpet__kettleswitch1.aif");
+	soundDetect.setVolume(100);
+	soundRelease.loadSound("sound/2674__dmooney__TAPE32.wav");
+	soundRelease.setVolume(100);
+	
 	// setup config gui
 	gui.setup();
 	gui.config->gridSize.x = 300;
@@ -73,6 +79,7 @@ void HandJesture::setup() {
 	gui.addSlider("Display height", displayHeight, 600, 1980);
 	gui.addButton("End Configure!!", endConfigBtn);
 	gui.setDefaultKeys(false);
+	gui.loadFromXML();
 	gui.show();
 
 	
@@ -116,7 +123,7 @@ void HandJesture::update() {
 		//if( pix[i] < nearThreshold && pix[i] > farThreshold ){
 		if(minThreshold < pix[i] 
 	    && pix[i] < nearestDepth+2 
-		&& pix[i] > nearestDepth - 6 ){
+		&& pix[i] > nearestDepth - 10 ){
 			//grayThreshPix[i] = floor((5 - (nearestDepth - pix[i]))/5.0f*255.0f);
 			pix[i] = 255; // white
 		}else{
@@ -128,10 +135,10 @@ void HandJesture::update() {
 	//update the cv image
 	grayImage.flagImageChanged();
 	//grayThresh.flagImageChanged();
-	grayImage.mirror(false, true);
+	//grayImage.mirror(false, true);
 	//grayThresh.mirror(false, true);
 	
-    contourFinder.findContours(grayImage, 400, (kinect.width*kinect.height)/4, 1, false);
+    contourFinder.findContours(grayImage, 800, (kinect.width*kinect.height)/4, 2, false);
 	
 	if (showConfigUI) {
 		return;
@@ -146,39 +153,49 @@ void HandJesture::update() {
 	}
 	
 	if (detectHands > 0) {
-		detectCount = min(60, ++detectCount);
+		detectCount = min(50, ++detectCount);
 	} else {
 		detectCount = max(0, --detectCount);
 	}
 	
 	if (detectingHands) {
-		if (detectCount < 20) {
+		if (detectCount < 10) {
 			detectingHands = false;
 			sendEvent("UnRegister", "\"mode\":\"single\"");
 			for (int j = 0; j < hands.size(); j++) {
 				hands[j]->unRegister();
 			}
+			soundRelease.play();
 		}
 	} else {
-		if (detectCount > 40) {
+		if (detectCount > 30) {
 			detectingHands = true;
 			sendEvent("Register", "\"mode\":\"single\"");
+			soundDetect.play();
 		}
 	}
-	
+
+	ofLog(OF_LOG_VERBOSE, ofToString(detectTwoHandsCount));
 	if (detectingTwoHands) {
+		ofLog(OF_LOG_VERBOSE, "detecTwo");
 		if (detectTwoHandsCount < 20) {
 			detectingTwoHands = false;
 			sendEvent("Register", "\"mode\":\"double\"");
 		}
 	} else {
+		ofLog(OF_LOG_VERBOSE, "Not...");
 		if (detectTwoHandsCount > 40) {
 			detectingTwoHands = true;
 			sendEvent("Register", "\"mode\":\"double\"");
+			CGEventRef keyEv = CGEventCreateKeyboardEvent(NULL, (CGKeyCode)101, true);
+			CGEventPost (kCGHIDEventTap, keyEv);
+			CGEventRef keyEv2 = CGEventCreateKeyboardEvent(NULL, (CGKeyCode)101, false);
+			CGEventPost (kCGHIDEventTap, keyEv2);
+
 		}
 	}
 	
-	if (detectingHands) {
+	if (detectingHands && detectHands == 1) {
 				
 		for (int i = 0; i < contourFinder.nBlobs; i++){
 			int centerX = contourFinder.blobs[i].centroid.x;
@@ -328,6 +345,7 @@ void HandJesture::exit(){
 //--------------------------------------------------------------
 void HandJesture::keyPressed (int key)
 {
+	ofLog(OF_LOG_VERBOSE, ofToString(key));
 	switch (key)
 	{
 		case '>':

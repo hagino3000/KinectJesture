@@ -65,6 +65,11 @@ public:
 	int					displayWidth;
 	int					displayHeight;
 	
+	// sounds
+	ofSoundPlayer		soundDetect;
+	ofSoundPlayer		soundRelease;
+
+	
 	// for detection
 	int					detectCount;
 	int					detectTwoHandsCount;

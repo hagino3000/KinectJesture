@@ -55,6 +55,8 @@ private:
 	// couner count use for click
 	int						handMode;
 	int						mouseDownCount;
+	int						toNormalModeCount;
+	int						jestureFiredCount;
 	int						currentCornerNums;
 	vector<int>				cornerCountHistory;
 	
@@ -63,9 +65,12 @@ private:
 	
 	int						displayHeight;
 	int						displayWidth;
+	float					previousFrameCount;
+	bool					isSuspendEvent;
 	
-	bool isMouseDown;
-	bool isMouseDrag;
+	// sounds
+	ofSoundPlayer		soundClick;
+	
 	bool isActive;
 	
 	bool isPrimary; //true: can move mouse, false: can click mouse
