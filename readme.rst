@@ -32,9 +32,19 @@ Open Project by xcode
 1. open jestureCap.xcodeproj
 2. Build and Run
 
+Credits
+-------
+Sound files from www.freesound.org
+
+TAPE32.WAV
+http://www.freesound.org/samplesViewSingle.php?id=2674
+
+kettleswitch1.aif
+http://www.freesound.org/samplesViewSingle.php?id=16582
   
 Contact
 -------
 Twitter `@hagino3000`__
+mail takashi.nishibayashi@gmail.com
 
 __ http://twitter.com/hagino3000
