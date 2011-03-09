@@ -1,7 +1,7 @@
 Kinect Jesture for Mac
 ======================
 
-You can play this interaction using mac and Kinect.
+Control the mouse cursor and fire the key events (right or left).
 
 Demo
 ----
