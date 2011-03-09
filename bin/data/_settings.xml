@@ -1,0 +1,26 @@
+<controls>
+    <SliderInt_Tilt_Angle>
+        <name>Tilt Angle</name>
+        <value>-10</value>
+    </SliderInt_Tilt_Angle>
+    <Toggle_Mirror_Mode>
+        <name>Mirror Mode</name>
+        <value>1</value>
+    </Toggle_Mirror_Mode>
+    <SliderInt_Near_Distance>
+        <name>Near Distance</name>
+        <value>5</value>
+    </SliderInt_Near_Distance>
+    <SliderInt_Far_Distance>
+        <name>Far Distance</name>
+        <value>32</value>
+    </SliderInt_Far_Distance>
+    <SliderInt_Display_Width>
+        <name>Display Width</name>
+        <value>1260</value>
+    </SliderInt_Display_Width>
+    <SliderInt_Display_height>
+        <name>Display height</name>
+        <value>810</value>
+    </SliderInt_Display_height>
+</controls>
