@@ -20,7 +20,11 @@ Get a Kinect
 
 Get OpenFrameworks
 
-1. git clone git://github.com/openframeworks/openFrameworks.git
+I tested pre release v0.062 FAT version.
+Download from here http://www.openframeworks.cc/download
+
+You need ofxOpenCv addon. 
+ofxOpenCv addon is Included FAT version or you can get from https://github.com/openframeworks/ofxOpenCv
 
 Deploy this source
 
