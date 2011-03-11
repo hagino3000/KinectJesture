@@ -24,7 +24,7 @@ I tested pre release v0.062 FAT version.
 Download from here http://www.openframeworks.cc/download
 
 You need ofxOpenCv addon. 
-ofxOpenCv addon is Included FAT version or you can get from https://github.com/openframeworks/ofxOpenCv
+ofxOpenCv addon is Included FAT version.
 
 Deploy this source
 
