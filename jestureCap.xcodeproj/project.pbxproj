@@ -1294,9 +1294,6 @@
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/lib/zmq/lib\"",
-					"\"$(SRCROOT)/libs/zmq/lib\"",
-					"\"$(SRCROOT)/../../../../tmp/zeromq2/lib\"",
-					"\"$(SRCROOT)/lib_i386/lib\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/freeimage/lib/osx\"";
@@ -1453,9 +1450,6 @@
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/lib/zmq/lib\"",
-					"\"$(SRCROOT)/libs/zmq/lib\"",
-					"\"$(SRCROOT)/../../../../tmp/zeromq2/lib\"",
-					"\"$(SRCROOT)/lib_i386/lib\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/freeimage/lib/osx\"";
@@ -1525,9 +1519,6 @@
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/lib/zmq/lib\"",
-					"\"$(SRCROOT)/libs/zmq/lib\"",
-					"\"$(SRCROOT)/../../../../tmp/zeromq2/lib\"",
-					"\"$(SRCROOT)/lib_i386/lib\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/libusb-osx/libs\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/freeimage/lib/osx\"";
