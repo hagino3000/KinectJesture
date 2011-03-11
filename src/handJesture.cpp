@@ -1,10 +1,11 @@
 #include "handJesture.h"
-#include "zhelpers.hpp"
+//#include "zhelpers.hpp"
 
 //the ZMQ socket used to transfer data to the browser
+/*
 zmq::context_t context (1);
 zmq::socket_t socket (context, ZMQ_PUB);
-
+*/
 //--------------------------------------------------------------
 void HandJesture::setup() {
 	ofSetLogLevel(0);
@@ -235,11 +236,13 @@ void HandJesture::update() {
 }
 
 void HandJesture::sendEvent(const std::string& etype, const std::string& edata) {
+	/*
 	s_sendmore (socket, "event");
 	stringstream ss;
 	ss << "{\"type\":\"" << etype << "\",\"data\":{" << edata << "}}";
 	s_send (socket, ss.str());
 	//std::cout << ss.str() << endl;
+    */
 }
 
 

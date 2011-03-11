@@ -18,9 +18,6 @@
 		1664201313235744000AAE66 /* ofxKinectRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1664200913235744000AAE66 /* ofxKinectRecorder.cpp */; };
 		1677CFBB12E291DB009B9D64 /* handJesture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1677CFB912E291DB009B9D64 /* handJesture.cpp */; };
 		167D112E1306D6BE0041F817 /* hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 167D112D1306D6BE0041F817 /* hand.cpp */; };
-		16E134AF1314199E004AC3C7 /* libzmq.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E134A41314199E004AC3C7 /* libzmq.1.dylib */; };
-		16E134B01314199E004AC3C7 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E134A51314199E004AC3C7 /* libzmq.a */; };
-		16E134B11314199E004AC3C7 /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E134A61314199E004AC3C7 /* libzmq.dylib */; };
 		16E3DE271306AE8000224050 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E3DE201306AE8000224050 /* tinyxml.cpp */; };
 		16E3DE281306AE8000224050 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E3DE221306AE8000224050 /* tinyxmlerror.cpp */; };
 		16E3DE291306AE8000224050 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E3DE231306AE8000224050 /* tinyxmlparser.cpp */; };
@@ -135,18 +132,6 @@
 		1677CFBA12E291DB009B9D64 /* handJesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = handJesture.h; sourceTree = "<group>"; };
 		167D112C1306D6BE0041F817 /* hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hand.h; sourceTree = "<group>"; };
 		167D112D1306D6BE0041F817 /* hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hand.cpp; sourceTree = "<group>"; };
-		167D135E130738F60041F817 /* zhelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = zhelpers.hpp; sourceTree = "<group>"; };
-		16E1349C1314199E004AC3C7 /* zmq_forwarder */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = zmq_forwarder; sourceTree = "<group>"; };
-		16E1349D1314199E004AC3C7 /* zmq_queue */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = zmq_queue; sourceTree = "<group>"; };
-		16E1349E1314199E004AC3C7 /* zmq_streamer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = zmq_streamer; sourceTree = "<group>"; };
-		16E134A01314199E004AC3C7 /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmq.h; sourceTree = "<group>"; };
-		16E134A11314199E004AC3C7 /* zmq.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = zmq.hpp; sourceTree = "<group>"; };
-		16E134A21314199E004AC3C7 /* zmq_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmq_utils.h; sourceTree = "<group>"; };
-		16E134A41314199E004AC3C7 /* libzmq.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.1.dylib; sourceTree = "<group>"; };
-		16E134A51314199E004AC3C7 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
-		16E134A61314199E004AC3C7 /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.dylib; sourceTree = "<group>"; };
-		16E134A71314199E004AC3C7 /* libzmq.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libzmq.la; sourceTree = "<group>"; };
-		16E134A91314199E004AC3C7 /* libzmq.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libzmq.pc; sourceTree = "<group>"; };
 		16E3DE1E1306AE8000224050 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		16E3DE201306AE8000224050 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		16E3DE211306AE8000224050 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -316,9 +301,6 @@
 				E4C242CD10CC650E004149E2 /* libfmodex.dylib in Frameworks */,
 				E49DA7BE10CD396F0006B5A8 /* freeimage.a in Frameworks */,
 				3077439D11CC21820022444F /* openCV.a in Frameworks */,
-				16E134AF1314199E004AC3C7 /* libzmq.1.dylib in Frameworks */,
-				16E134B01314199E004AC3C7 /* libzmq.a in Frameworks */,
-				16E134B11314199E004AC3C7 /* libzmq.dylib in Frameworks */,
 				1664200F13235744000AAE66 /* usb-1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,97 +397,6 @@
 				1664200A13235744000AAE66 /* ofxKinectRecorder.h */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		16E1349A1314199E004AC3C7 /* zmq */ = {
-			isa = PBXGroup;
-			children = (
-				16E1349B1314199E004AC3C7 /* bin */,
-				16E1349F1314199E004AC3C7 /* include */,
-				16E134A31314199E004AC3C7 /* lib */,
-				16E134AA1314199E004AC3C7 /* share */,
-			);
-			name = zmq;
-			path = lib/zmq;
-			sourceTree = SOURCE_ROOT;
-		};
-		16E1349B1314199E004AC3C7 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				16E1349C1314199E004AC3C7 /* zmq_forwarder */,
-				16E1349D1314199E004AC3C7 /* zmq_queue */,
-				16E1349E1314199E004AC3C7 /* zmq_streamer */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		16E1349F1314199E004AC3C7 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				16E134A01314199E004AC3C7 /* zmq.h */,
-				16E134A11314199E004AC3C7 /* zmq.hpp */,
-				16E134A21314199E004AC3C7 /* zmq_utils.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		16E134A31314199E004AC3C7 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				16E134A41314199E004AC3C7 /* libzmq.1.dylib */,
-				16E134A51314199E004AC3C7 /* libzmq.a */,
-				16E134A61314199E004AC3C7 /* libzmq.dylib */,
-				16E134A71314199E004AC3C7 /* libzmq.la */,
-				16E134A81314199E004AC3C7 /* pkgconfig */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		16E134A81314199E004AC3C7 /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				16E134A91314199E004AC3C7 /* libzmq.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		16E134AA1314199E004AC3C7 /* share */ = {
-			isa = PBXGroup;
-			children = (
-				16E134AB1314199E004AC3C7 /* man */,
-			);
-			path = share;
-			sourceTree = "<group>";
-		};
-		16E134AB1314199E004AC3C7 /* man */ = {
-			isa = PBXGroup;
-			children = (
-				16E134AC1314199E004AC3C7 /* man1 */,
-				16E134AD1314199E004AC3C7 /* man3 */,
-				16E134AE1314199E004AC3C7 /* man7 */,
-			);
-			path = man;
-			sourceTree = "<group>";
-		};
-		16E134AC1314199E004AC3C7 /* man1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = man1;
-			sourceTree = "<group>";
-		};
-		16E134AD1314199E004AC3C7 /* man3 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = man3;
-			sourceTree = "<group>";
-		};
-		16E134AE1314199E004AC3C7 /* man7 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = man7;
 			sourceTree = "<group>";
 		};
 		16E3DE1D1306AE8000224050 /* ofxXmlSettings */ = {
@@ -947,8 +838,6 @@
 			isa = PBXGroup;
 			children = (
 				16641FED13235744000AAE66 /* ofxKinect */,
-				16E1349A1314199E004AC3C7 /* zmq */,
-				167D135E130738F60041F817 /* zhelpers.hpp */,
 				16E3DE2B1306AE9800224050 /* ofxSimpleGuiToo */,
 				16E3DE531306AE9800224050 /* ofxMSAInteractiveObject */,
 				1677CFB912E291DB009B9D64 /* handJesture.cpp */,
