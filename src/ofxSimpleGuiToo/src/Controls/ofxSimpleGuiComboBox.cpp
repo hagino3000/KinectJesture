@@ -192,13 +192,13 @@ void ofxSimpleGuiComboBox::releaseEventStealingFocus(){
 
 //special overloads - this is a hack - later think about making ofxSimpleGuiControl's methods virtual.
 void ofxSimpleGuiComboBox::setCBTextColor() {
-	if(m_hasFocus) ofSetHexColor(config->textOverColor);
-	else ofSetHexColor(config->textColor);
+	if(m_hasFocus) ofSetColor(config->textOverColor);
+	else ofSetColor(config->textColor);
 }
 
 void ofxSimpleGuiComboBox::setCBTextBGColor() {
-	if(m_hasFocus) ofSetHexColor(config->textBGOverColor);
-	else ofSetHexColor(config->textBGColor);
+	if(m_hasFocus) ofSetColor(config->textBGOverColor);
+	else ofSetColor(config->textBGColor);
 }
 
 

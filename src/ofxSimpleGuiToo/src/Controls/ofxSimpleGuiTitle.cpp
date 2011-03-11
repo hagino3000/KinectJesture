@@ -75,7 +75,7 @@ void ofxSimpleGuiTitle::draw(float x, float y) {
 	ofFill();
 	//		setTextBGColor(value != NULL);
 	//		ofSetColor(0, 0, 0);
-	ofSetHexColor(config->fullActiveColor);
+	ofSetColor(config->fullActiveColor);
 	ofRect(0, 0, width, height);
 	
 	// if a toggle

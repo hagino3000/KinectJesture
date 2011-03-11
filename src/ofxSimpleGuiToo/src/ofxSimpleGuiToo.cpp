@@ -186,7 +186,7 @@ void ofxSimpleGuiToo::draw() {
 	glDisableClientState(GL_COLOR_ARRAY);
 
 	headerPage->draw(0, 0, alignRight);		// this is the header
-	ofSetHexColor(config->borderColor);
+	ofSetColor(config->borderColor);
 	if(alignRight) ofLine(ofGetWidth() - headerPage->width, headerPage->height, headerPage->width, headerPage->height);
 	else ofLine(0, headerPage->height, headerPage->width, headerPage->height);
 	pages[currentPageIndex]->draw(0.0f, headerPage->height, alignRight);
