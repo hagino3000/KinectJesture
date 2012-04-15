@@ -33,7 +33,7 @@ Deploy this source
 
 Open Project by xcode
 
-1. open jestureCap.xcodeproj
+1. open KinectJesture.xcodeproj
 2. Build and Run
 
 Credits
