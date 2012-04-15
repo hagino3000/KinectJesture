@@ -3,7 +3,7 @@
 *.mode*v3
 *.pbxuser
 *.app*
-*.DS_*
+.DS_Store
 *.swp
 
 
@@ -14,4 +14,7 @@ obj/
 bin/
 build/
 !data/
+
+project.xcworkspace
+xcuserdata
 
