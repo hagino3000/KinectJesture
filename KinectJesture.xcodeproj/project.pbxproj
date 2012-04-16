@@ -1233,6 +1233,8 @@
 					../../../libs/fmodex/include,
 					../../../addons/,
 					/usr/local/include/,
+					../../../libs/glut/include,
+					../../../libs/glee/include,
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = (
