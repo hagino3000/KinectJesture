@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		161A57C4153AD49500CD333A /* openFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 161A57C3153AD49500CD333A /* openFrameworks.a */; };
 		1664200B13235744000AAE66 /* cameras.c in Sources */ = {isa = PBXBuildFile; fileRef = 16641FF113235744000AAE66 /* cameras.c */; };
 		1664200C13235744000AAE66 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 16641FF213235744000AAE66 /* core.c */; };
 		1664200D13235744000AAE66 /* tilt.c in Sources */ = {isa = PBXBuildFile; fileRef = 16641FF713235744000AAE66 /* tilt.c */; };
@@ -77,6 +76,23 @@
 		E4F0560A1293A22200BAAF7C /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F056021293A22200BAAF7C /* ofxQuaternion.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1695F681153C815800550E44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		1695F684153C827600550E44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -91,7 +107,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		161A57C3153AD49500CD333A /* openFrameworks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = openFrameworks.a; path = ../../../libs/openFrameworksCompiled/lib/osx/openFrameworks.a; sourceTree = "<group>"; };
 		16641FF113235744000AAE66 /* cameras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cameras.c; sourceTree = "<group>"; };
 		16641FF213235744000AAE66 /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core.c; sourceTree = "<group>"; };
 		16641FF313235744000AAE66 /* freenect_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = freenect_internal.h; sourceTree = "<group>"; };
@@ -116,6 +131,7 @@
 		1677CFBA12E291DB009B9D64 /* handJesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = handJesture.h; sourceTree = "<group>"; };
 		167D112C1306D6BE0041F817 /* hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hand.h; sourceTree = "<group>"; };
 		167D112D1306D6BE0041F817 /* hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hand.cpp; sourceTree = "<group>"; };
+		1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
 		16E3DE1E1306AE8000224050 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		16E3DE201306AE8000224050 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		16E3DE211306AE8000224050 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -284,7 +300,6 @@
 				E49DA7BE10CD396F0006B5A8 /* freeimage.a in Frameworks */,
 				3077439D11CC21820022444F /* openCV.a in Frameworks */,
 				1664200F13235744000AAE66 /* usb-1.0.a in Frameworks */,
-				161A57C4153AD49500CD333A /* openFrameworks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +395,14 @@
 				1664200A13235744000AAE66 /* ofxKinectRecorder.h */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		1695F67B153C815800550E44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1695F682153C815800550E44 /* openFrameworksDebug.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		16E3DE1D1306AE8000224050 /* ofxXmlSettings */ = {
@@ -835,7 +858,7 @@
 		E4C2422310CC54B6004149E2 /* openFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				161A57C3153AD49500CD333A /* openFrameworks.a */,
+				1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
 			sourceTree = "<group>";
@@ -944,6 +967,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1695F685153C827600550E44 /* PBXTargetDependency */,
 			);
 			name = KinectJesture;
 			productName = myOFApp;
@@ -968,12 +992,28 @@
 			mainGroup = E4B69B4A0A3A1720003C02F2;
 			productRefGroup = E4B69B4A0A3A1720003C02F2;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1695F67B153C815800550E44 /* Products */;
+					ProjectRef = 1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E4B69B5A0A3A1756003C02F2 /* KinectJesture */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1695F682153C815800550E44 /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = 1695F681153C815800550E44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
@@ -1041,6 +1081,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1695F685153C827600550E44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = 1695F684153C827600550E44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E4B27CA010CBF8A600536013 /* ReleaseUniversal */ = {
@@ -1132,7 +1180,6 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
-					"\"$(SRCROOT)/lib/zmq/lib\"",
 					"\"$(SRCROOT)/../../../libs/openFrameworksCompiled/lib/osx\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"";
@@ -1289,7 +1336,6 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
-					"\"$(SRCROOT)/lib/zmq/lib\"",
 					"\"$(SRCROOT)/../../../libs/openFrameworksCompiled/lib/osx\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"";
@@ -1359,7 +1405,6 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
-					"\"$(SRCROOT)/lib/zmq/lib\"",
 					"\"$(SRCROOT)/../../../libs/openFrameworksCompiled/lib/osx\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/libusb-osx/libs\"";
