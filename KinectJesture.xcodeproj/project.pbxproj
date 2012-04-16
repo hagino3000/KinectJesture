@@ -18,6 +18,11 @@
 		1664201313235744000AAE66 /* ofxKinectRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1664200913235744000AAE66 /* ofxKinectRecorder.cpp */; };
 		1677CFBB12E291DB009B9D64 /* handJesture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1677CFB912E291DB009B9D64 /* handJesture.cpp */; };
 		167D112E1306D6BE0041F817 /* hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 167D112D1306D6BE0041F817 /* hand.cpp */; };
+		1695F6A6153C8D3900550E44 /* libGLEW.1.5.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1695F6A2153C8D3900550E44 /* libGLEW.1.5.8.dylib */; };
+		1695F6A7153C8D3900550E44 /* libGLEW.1.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1695F6A3153C8D3900550E44 /* libGLEW.1.5.dylib */; };
+		1695F6A8153C8D3900550E44 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1695F6A4153C8D3900550E44 /* libGLEW.a */; };
+		1695F6A9153C8D3900550E44 /* libGLEW.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1695F6A5153C8D3900550E44 /* libGLEW.dylib */; };
+		1695F6AC153C8F0A00550E44 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1695F6AB153C8F0A00550E44 /* openFrameworksDebug.a */; };
 		16E3DE271306AE8000224050 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E3DE201306AE8000224050 /* tinyxml.cpp */; };
 		16E3DE281306AE8000224050 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E3DE221306AE8000224050 /* tinyxmlerror.cpp */; };
 		16E3DE291306AE8000224050 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E3DE231306AE8000224050 /* tinyxmlparser.cpp */; };
@@ -132,6 +137,14 @@
 		167D112C1306D6BE0041F817 /* hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hand.h; sourceTree = "<group>"; };
 		167D112D1306D6BE0041F817 /* hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hand.cpp; sourceTree = "<group>"; };
 		1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
+		1695F69D153C8D3900550E44 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
+		1695F69E153C8D3900550E44 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
+		1695F69F153C8D3900550E44 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
+		1695F6A2153C8D3900550E44 /* libGLEW.1.5.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.1.5.8.dylib; sourceTree = "<group>"; };
+		1695F6A3153C8D3900550E44 /* libGLEW.1.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.1.5.dylib; sourceTree = "<group>"; };
+		1695F6A4153C8D3900550E44 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLEW.a; sourceTree = "<group>"; };
+		1695F6A5153C8D3900550E44 /* libGLEW.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.dylib; sourceTree = "<group>"; };
+		1695F6AB153C8F0A00550E44 /* openFrameworksDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = openFrameworksDebug.a; path = ../../../libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a; sourceTree = "<group>"; };
 		16E3DE1E1306AE8000224050 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		16E3DE201306AE8000224050 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		16E3DE211306AE8000224050 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -300,6 +313,11 @@
 				E49DA7BE10CD396F0006B5A8 /* freeimage.a in Frameworks */,
 				3077439D11CC21820022444F /* openCV.a in Frameworks */,
 				1664200F13235744000AAE66 /* usb-1.0.a in Frameworks */,
+				1695F6A6153C8D3900550E44 /* libGLEW.1.5.8.dylib in Frameworks */,
+				1695F6A7153C8D3900550E44 /* libGLEW.1.5.dylib in Frameworks */,
+				1695F6A8153C8D3900550E44 /* libGLEW.a in Frameworks */,
+				1695F6A9153C8D3900550E44 /* libGLEW.dylib in Frameworks */,
+				1695F6AC153C8F0A00550E44 /* openFrameworksDebug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +421,53 @@
 				1695F682153C815800550E44 /* openFrameworksDebug.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1695F69A153C8D3900550E44 /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				1695F69B153C8D3900550E44 /* include */,
+				1695F6A0153C8D3900550E44 /* lib */,
+			);
+			name = glew;
+			path = libs/glew;
+			sourceTree = "<group>";
+		};
+		1695F69B153C8D3900550E44 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1695F69C153C8D3900550E44 /* GL */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1695F69C153C8D3900550E44 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				1695F69D153C8D3900550E44 /* glew.h */,
+				1695F69E153C8D3900550E44 /* glxew.h */,
+				1695F69F153C8D3900550E44 /* wglew.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		1695F6A0153C8D3900550E44 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1695F6A1153C8D3900550E44 /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		1695F6A1153C8D3900550E44 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				1695F6A2153C8D3900550E44 /* libGLEW.1.5.8.dylib */,
+				1695F6A3153C8D3900550E44 /* libGLEW.1.5.dylib */,
+				1695F6A4153C8D3900550E44 /* libGLEW.a */,
+				1695F6A5153C8D3900550E44 /* libGLEW.dylib */,
+			);
+			path = osx;
 			sourceTree = "<group>";
 		};
 		16E3DE1D1306AE8000224050 /* ofxXmlSettings */ = {
@@ -645,6 +710,7 @@
 		E45BE0360E8CC5DE009D7055 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				1695F69A153C8D3900550E44 /* glew */,
 				E45BEED60E8CCB34009D7055 /* core */,
 			);
 			name = libs;
@@ -858,6 +924,7 @@
 		E4C2422310CC54B6004149E2 /* openFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1695F6AB153C8F0A00550E44 /* openFrameworksDebug.a */,
 				1695F67A153C815800550E44 /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
@@ -1181,6 +1248,7 @@
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/../../../libs/openFrameworksCompiled/lib/osx\"",
+					"\"$(SRCROOT)/libs/glew/lib/osx\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_3 = "\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/freeimage/lib/osx\"";
@@ -1339,6 +1407,7 @@
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/../../../libs/openFrameworksCompiled/lib/osx\"",
+					"\"$(SRCROOT)/libs/glew/lib/osx\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/freeimage/lib/osx\"";
@@ -1408,6 +1477,7 @@
 					"\"$(SRCROOT)/../../../addons/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/src/ofxKinect/libs/libusb/osx/libs\"",
 					"\"$(SRCROOT)/../../../libs/openFrameworksCompiled/lib/osx\"",
+					"\"$(SRCROOT)/libs/glew/lib/osx\"",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/libusb-osx/libs\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/freeimage/lib/osx\"";
